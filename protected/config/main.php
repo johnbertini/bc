@@ -10,7 +10,11 @@ return array(
 	'name'=>'My Web Application',
 
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array(
+		'bootstrap',
+		'log',
+		
+		),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -24,6 +28,9 @@ return array(
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'Enter Your Password Here',
+			'generatorPaths'=>array(
+					'bootstrap.gii'
+				),
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
@@ -38,6 +45,11 @@ return array(
 		),
 		// uncomment the following to enable URLs in path-format
 		
+		'bootstrap' => array(
+	    	'class'=>'ext.bootstrap.components.Bootstrap',
+	    	'responsiveCss'=>true,
+			),
+
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
