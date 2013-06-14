@@ -1,0 +1,219 @@
+2013/06/13 19:24:33 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_users' (
+	"UserID" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"UserEmail" varchar(255) NOT NULL,
+	"UserFname" varchar(255) NOT NULL,
+	"UserLname" varchar(255) NOT NULL,
+	"UserAffiliateUsername" varchar(255) NOT NULL,
+	"UserPassword" varchar(255) NOT NULL,
+	"UserSponsorId" varchar(255) default NULL,
+	"UserCountry" varchar(255) NOT NULL,
+	"UserAddress" varchar(255) NOT NULL,
+	"UserCity" varchar(255) NOT NULL,
+	"UserState" varchar(255) NOT NULL,
+	"UsertZip" varchar(255) NOT NULL,
+	"UserPhone" varchar(255) NOT NULL,
+	"UserEIN" varchar(255) default NULL,
+	"UserCreated" DATETIME default NULL,
+	"UserLastvisit" DATETIME default NULL,
+	"UserStatus" varchar(255) NOT NULL
+) ENGINE=InnoDB
+2013/06/13 19:24:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_users' (
+	"UserID" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"UserEmail" varchar(255) NOT NULL,
+	"UserFname" varchar(255) NOT NULL,
+	"UserLname" varchar(255) NOT NULL,
+	"UserAffiliateUsername" varchar(255) NOT NULL,
+	"UserPassword" varchar(255) NOT NULL,
+	"UserSponsorId" varchar(255) default NULL,
+	"UserCountry" varchar(255) NOT NULL,
+	"UserAddress" varchar(255) NOT NULL,
+	"UserCity" varchar(255) NOT NULL,
+	"UserState" varchar(255) NOT NULL,
+	"UsertZip" varchar(255) NOT NULL,
+	"UserPhone" varchar(255) NOT NULL,
+	"UserEIN" varchar(255) default NULL,
+	"UserCreated" DATETIME default NULL,
+	"UserLastvisit" DATETIME default NULL,
+	"UserStatus" varchar(255) NOT NULL
+) ENGINE=InnoDB.
+2013/06/13 19:24:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_users' (
+	"UserID" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"UserEmail" varchar(255) NOT NULL,
+	"UserFname" varchar(255) NOT NULL,
+	"UserLname" varchar(255) NOT NULL,
+	"UserAffiliateUsername" varchar(255) NOT NULL,
+	"UserPassword" varchar(255) NOT NULL,
+	"UserSponsorId" varchar(255) default NULL,
+	"UserCountry" varchar(255) NOT NULL,
+	"UserAddress" varchar(255) NOT NULL,
+	"UserCity" varchar(255) NOT NULL,
+	"UserState" varchar(255) NOT NULL,
+	"UsertZip" varchar(255) NOT NULL,
+	"UserPhone" varchar(255) NOT NULL,
+	"UserEIN" varchar(255) default NULL,
+	"UserCreated" DATETIME default NULL,
+	"UserLastvisit" DATETIME default NULL,
+	"UserStatus" varchar(255) NOT NULL
+) ENGINE=InnoDB' in /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php(1321): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/yii/framework/db/CDbMigration.php(228): CDbCommand->createTable('tbl_users', Array, 'ENGINE=InnoDB')
+#2 /Applications/MAMP/htdocs/businesscards/protected/migrations/m130612_073231_create_user_table.php(25): CDbMigration->createTable('tbl_users', Array, 'ENGINE=InnoDB')
+#3 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(385): m130612_073231_create_user_table->up()
+#4 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m130612_073231_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 /Applications/MAMP/htdocs/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /Applications/MAMP/htdocs/yii/framework/yiic.php(33): CApplication->run()
+#11 /Applications/MAMP/htdocs/businesscards/protected/yiic.php(7): require_once('/Applications/M...')
+#12 /Applications/MAMP/htdocs/businesscards/protected/yiic(4): require_once('/Applications/M...')
+#13 {main}
+---
+2013/06/13 19:25:06 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_users' (
+	"UserID" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"UserEmail" varchar(255) NOT NULL,
+	"UserFname" varchar(255) NOT NULL,
+	"UserLname" varchar(255) NOT NULL,
+	"UserAffiliateUsername" varchar(255) NOT NULL,
+	"UserPassword" varchar(255) NOT NULL,
+	"UserSponsorId" varchar(255) default NULL,
+	"UserCountry" varchar(255) NOT NULL,
+	"UserAddress" varchar(255) NOT NULL,
+	"UserCity" varchar(255) NOT NULL,
+	"UserState" varchar(255) NOT NULL,
+	"UsertZip" varchar(255) NOT NULL,
+	"UserPhone" varchar(255) NOT NULL,
+	"UserEIN" varchar(255) default NULL,
+	"UserCreated" DATETIME default NULL,
+	"UserLastvisit" DATETIME default NULL,
+	"UserStatus" varchar(255) NOT NULL
+) ENGINE=InnoDB
+2013/06/13 19:25:06 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_users' (
+	"UserID" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"UserEmail" varchar(255) NOT NULL,
+	"UserFname" varchar(255) NOT NULL,
+	"UserLname" varchar(255) NOT NULL,
+	"UserAffiliateUsername" varchar(255) NOT NULL,
+	"UserPassword" varchar(255) NOT NULL,
+	"UserSponsorId" varchar(255) default NULL,
+	"UserCountry" varchar(255) NOT NULL,
+	"UserAddress" varchar(255) NOT NULL,
+	"UserCity" varchar(255) NOT NULL,
+	"UserState" varchar(255) NOT NULL,
+	"UsertZip" varchar(255) NOT NULL,
+	"UserPhone" varchar(255) NOT NULL,
+	"UserEIN" varchar(255) default NULL,
+	"UserCreated" DATETIME default NULL,
+	"UserLastvisit" DATETIME default NULL,
+	"UserStatus" varchar(255) NOT NULL
+) ENGINE=InnoDB.
+2013/06/13 19:25:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_users' (
+	"UserID" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"UserEmail" varchar(255) NOT NULL,
+	"UserFname" varchar(255) NOT NULL,
+	"UserLname" varchar(255) NOT NULL,
+	"UserAffiliateUsername" varchar(255) NOT NULL,
+	"UserPassword" varchar(255) NOT NULL,
+	"UserSponsorId" varchar(255) default NULL,
+	"UserCountry" varchar(255) NOT NULL,
+	"UserAddress" varchar(255) NOT NULL,
+	"UserCity" varchar(255) NOT NULL,
+	"UserState" varchar(255) NOT NULL,
+	"UsertZip" varchar(255) NOT NULL,
+	"UserPhone" varchar(255) NOT NULL,
+	"UserEIN" varchar(255) default NULL,
+	"UserCreated" DATETIME default NULL,
+	"UserLastvisit" DATETIME default NULL,
+	"UserStatus" varchar(255) NOT NULL
+) ENGINE=InnoDB' in /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php(1321): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/yii/framework/db/CDbMigration.php(228): CDbCommand->createTable('tbl_users', Array, 'ENGINE=InnoDB')
+#2 /Applications/MAMP/htdocs/businesscards/protected/migrations/m130612_073231_create_user_table.php(25): CDbMigration->createTable('tbl_users', Array, 'ENGINE=InnoDB')
+#3 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(385): m130612_073231_create_user_table->up()
+#4 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m130612_073231_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 /Applications/MAMP/htdocs/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /Applications/MAMP/htdocs/yii/framework/yiic.php(33): CApplication->run()
+#11 /Applications/MAMP/htdocs/businesscards/protected/yiic.php(7): require_once('/Applications/M...')
+#12 /Applications/MAMP/htdocs/businesscards/protected/yiic(4): require_once('/Applications/M...')
+#13 {main}
+---
+2013/06/13 19:25:44 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_users' (
+	"UserID" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"UserEmail" varchar(255) NOT NULL,
+	"UserFname" varchar(255) NOT NULL,
+	"UserLname" varchar(255) NOT NULL,
+	"UserAffiliateUsername" varchar(255) NOT NULL,
+	"UserPassword" varchar(255) NOT NULL,
+	"UserSponsorId" varchar(255) default NULL,
+	"UserCountry" varchar(255) NOT NULL,
+	"UserAddress" varchar(255) NOT NULL,
+	"UserCity" varchar(255) NOT NULL,
+	"UserState" varchar(255) NOT NULL,
+	"UsertZip" varchar(255) NOT NULL,
+	"UserPhone" varchar(255) NOT NULL,
+	"UserEIN" varchar(255) default NULL,
+	"UserCreated" DATETIME default NULL,
+	"UserLastvisit" DATETIME default NULL,
+	"UserStatus" varchar(255) NOT NULL
+) ENGINE=InnoDB
+2013/06/13 19:25:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_users' (
+	"UserID" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"UserEmail" varchar(255) NOT NULL,
+	"UserFname" varchar(255) NOT NULL,
+	"UserLname" varchar(255) NOT NULL,
+	"UserAffiliateUsername" varchar(255) NOT NULL,
+	"UserPassword" varchar(255) NOT NULL,
+	"UserSponsorId" varchar(255) default NULL,
+	"UserCountry" varchar(255) NOT NULL,
+	"UserAddress" varchar(255) NOT NULL,
+	"UserCity" varchar(255) NOT NULL,
+	"UserState" varchar(255) NOT NULL,
+	"UsertZip" varchar(255) NOT NULL,
+	"UserPhone" varchar(255) NOT NULL,
+	"UserEIN" varchar(255) default NULL,
+	"UserCreated" DATETIME default NULL,
+	"UserLastvisit" DATETIME default NULL,
+	"UserStatus" varchar(255) NOT NULL
+) ENGINE=InnoDB.
+2013/06/13 19:25:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_users' (
+	"UserID" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"UserEmail" varchar(255) NOT NULL,
+	"UserFname" varchar(255) NOT NULL,
+	"UserLname" varchar(255) NOT NULL,
+	"UserAffiliateUsername" varchar(255) NOT NULL,
+	"UserPassword" varchar(255) NOT NULL,
+	"UserSponsorId" varchar(255) default NULL,
+	"UserCountry" varchar(255) NOT NULL,
+	"UserAddress" varchar(255) NOT NULL,
+	"UserCity" varchar(255) NOT NULL,
+	"UserState" varchar(255) NOT NULL,
+	"UsertZip" varchar(255) NOT NULL,
+	"UserPhone" varchar(255) NOT NULL,
+	"UserEIN" varchar(255) default NULL,
+	"UserCreated" DATETIME default NULL,
+	"UserLastvisit" DATETIME default NULL,
+	"UserStatus" varchar(255) NOT NULL
+) ENGINE=InnoDB' in /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php(1321): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/yii/framework/db/CDbMigration.php(228): CDbCommand->createTable('tbl_users', Array, 'ENGINE=InnoDB')
+#2 /Applications/MAMP/htdocs/businesscards/protected/migrations/m130612_073231_create_user_table.php(25): CDbMigration->createTable('tbl_users', Array, 'ENGINE=InnoDB')
+#3 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(385): m130612_073231_create_user_table->up()
+#4 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m130612_073231_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 /Applications/MAMP/htdocs/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /Applications/MAMP/htdocs/yii/framework/yiic.php(33): CApplication->run()
+#11 /Applications/MAMP/htdocs/businesscards/protected/yiic.php(7): require_once('/Applications/M...')
+#12 /Applications/MAMP/htdocs/businesscards/protected/yiic(4): require_once('/Applications/M...')
+#13 {main}
+---
