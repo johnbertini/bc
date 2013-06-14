@@ -27,7 +27,7 @@ return array(
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'password'=>'12345',
 			'generatorPaths'=>array(
 					'bootstrap.gii'
 				),
