@@ -48,7 +48,7 @@ class Orders extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('OrderUserID, OrderSponsorID, OrderCountry, OrderAddress, OrderCity, OrderState, OrdertZip, OrderMadeDate, OrderStatus, OrderAmmount, OrderTax, OrderShipping', 'required'),
+			array('OrderUserID, OrderSponsorID, OrderCountry, OrderAddress, OrderCity, OrderState, OrdertZip', 'required'),
 			array('OrderUserID, OrderSponsorID', 'numerical', 'integerOnly'=>true),
 			array('OrderAmmount, OrderTax, OrderShipping', 'numerical'),
 			array('OrderCountry, OrderAddress, OrderCity, OrderState, OrdertZip, OrderStatus, OrderTrackingNum', 'length', 'max'=>255),
@@ -77,20 +77,20 @@ class Orders extends CActiveRecord
 	{
 		return array(
 			'OrderID' => 'Order',
-			'OrderUserID' => 'Order User',
-			'OrderSponsorID' => 'Order Sponsor',
-			'OrderCountry' => 'Order Country',
-			'OrderAddress' => 'Order Address',
-			'OrderCity' => 'Order City',
-			'OrderState' => 'Order State',
-			'OrdertZip' => 'Ordert Zip',
-			'OrderMadeDate' => 'Order Made Date',
-			'OrderCompletionDate' => 'Order Completion Date',
-			'OrderStatus' => 'Order Status',
-			'OrderTrackingNum' => 'Order Tracking Num',
-			'OrderAmmount' => 'Order Ammount',
-			'OrderTax' => 'Order Tax',
-			'OrderShipping' => 'Order Shipping',
+			'OrderUserID' => 'UserID',
+			'OrderSponsorID' => 'Sponsor',
+			'OrderCountry' => 'Country',
+			'OrderAddress' => 'Address',
+			'OrderCity' => 'City',
+			'OrderState' => 'State',
+			'OrdertZip' => 'Zip',
+			'OrderMadeDate' => 'Date',
+			'OrderCompletionDate' => 'Completion Date',
+			'OrderStatus' => 'Status',
+			'OrderTrackingNum' => ' Tracking Num',
+			'OrderAmmount' => 'Amount',
+			'OrderTax' => 'Tax',
+			'OrderShipping' => 'Shipping',
 		);
 	}
 

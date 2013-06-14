@@ -57,7 +57,7 @@
 		<?php echo $form->error($model,'OrdertZip'); ?>
 	</div>
 
-	<div class="row">
+<!-- 	<div class="row">
 		<?php echo $form->labelEx($model,'OrderMadeDate'); ?>
 		<?php echo $form->textField($model,'OrderMadeDate'); ?>
 		<?php echo $form->error($model,'OrderMadeDate'); ?>
@@ -67,9 +67,9 @@
 		<?php echo $form->labelEx($model,'OrderCompletionDate'); ?>
 		<?php echo $form->textField($model,'OrderCompletionDate'); ?>
 		<?php echo $form->error($model,'OrderCompletionDate'); ?>
-	</div>
+	</div> -->
 
-	<div class="row">
+<!-- 	<div class="row">
 		<?php echo $form->labelEx($model,'OrderStatus'); ?>
 		<?php echo $form->textField($model,'OrderStatus',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'OrderStatus'); ?>
@@ -79,9 +79,9 @@
 		<?php echo $form->labelEx($model,'OrderTrackingNum'); ?>
 		<?php echo $form->textField($model,'OrderTrackingNum',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'OrderTrackingNum'); ?>
-	</div>
+	</div> -->
 
-	<div class="row">
+<!-- 	<div class="row">
 		<?php echo $form->labelEx($model,'OrderAmmount'); ?>
 		<?php echo $form->textField($model,'OrderAmmount'); ?>
 		<?php echo $form->error($model,'OrderAmmount'); ?>
@@ -91,14 +91,14 @@
 		<?php echo $form->labelEx($model,'OrderTax'); ?>
 		<?php echo $form->textField($model,'OrderTax'); ?>
 		<?php echo $form->error($model,'OrderTax'); ?>
-	</div>
-
+	</div> -->
+<!-- 
 	<div class="row">
 		<?php echo $form->labelEx($model,'OrderShipping'); ?>
 		<?php echo $form->textField($model,'OrderShipping'); ?>
 		<?php echo $form->error($model,'OrderShipping'); ?>
 	</div>
-
+ -->
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
