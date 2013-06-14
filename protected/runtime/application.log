@@ -925,3 +925,78 @@ Stack trace:
 #28 {main}
 REQUEST_URI=/businesscards/index.php/users/create
 ---
+2013/06/14 09:24:51 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/MAMP/htdocs/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(125): CApplication->__construct('/Applications/M...')
+#5 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/Applications/M...')
+#6 /Applications/MAMP/htdocs/bc/index.php(13): YiiBase::createWebApplication('/Applications/M...')
+#7 {main}
+REQUEST_URI=/bc/index.php/site/page?view=about
+HTTP_REFERER=http://localhost:8888/bc/
+---
+2013/06/14 09:25:54 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/MAMP/htdocs/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(125): CApplication->__construct('/Applications/M...')
+#5 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/Applications/M...')
+#6 /Applications/MAMP/htdocs/bc/index.php(13): YiiBase::createWebApplication('/Applications/M...')
+#7 {main}
+REQUEST_URI=/bc/index.php/site/page?view=about
+HTTP_REFERER=http://localhost:8888/bc/
+---
+2013/06/14 09:28:03 [error] [exception.CException] exception 'CException' with message 'Property "Bootstrap.responsiveCss" is not defined.' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(220): CComponent->__set('responsiveCss', true)
+#1 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(125): CApplication->__construct('/Applications/M...')
+#5 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/Applications/M...')
+#6 /Applications/MAMP/htdocs/bc/index.php(13): YiiBase::createWebApplication('/Applications/M...')
+#7 {main}
+REQUEST_URI=/bc/index.php/site/page?view=about
+HTTP_REFERER=http://localhost:8888/bc/
+---
+2013/06/14 09:29:20 [error] [exception.CException] exception 'CException' with message 'Property "Bootstrap.responsiveCss" is not defined.' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(220): CComponent->__set('responsiveCss', true)
+#1 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(125): CApplication->__construct('/Applications/M...')
+#5 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/Applications/M...')
+#6 /Applications/MAMP/htdocs/bc/index.php(13): YiiBase::createWebApplication('/Applications/M...')
+#7 {main}
+REQUEST_URI=/bc/
+---
+2013/06/14 09:33:34 [error] [exception.CException] exception 'CException' with message 'Property "Bootstrap.responsiveCss" is not defined.' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(220): CComponent->__set('responsiveCss', true)
+#1 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(125): CApplication->__construct('/Applications/M...')
+#5 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/Applications/M...')
+#6 /Applications/MAMP/htdocs/bc/index.php(13): YiiBase::createWebApplication('/Applications/M...')
+#7 {main}
+REQUEST_URI=/bc/
+---
+2013/06/14 09:33:37 [error] [exception.CException] exception 'CException' with message 'Property "Bootstrap.responsiveCss" is not defined.' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(220): CComponent->__set('responsiveCss', true)
+#1 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /Applications/MAMP/htdocs/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(125): CApplication->__construct('/Applications/M...')
+#5 /Applications/MAMP/htdocs/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/Applications/M...')
+#6 /Applications/MAMP/htdocs/bc/index.php(13): YiiBase::createWebApplication('/Applications/M...')
+#7 {main}
+REQUEST_URI=/bc/
+---
