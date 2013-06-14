@@ -149,7 +149,32 @@ class Users extends CActiveRecord
 	 				),
 				);
 		}
-	
+	protected function afterValidate()
+     {
+       parent::afterValidate();
+	     if(!$this->hasErrors())
+	         $this->UserPassword = $this->hashPassword($this->UserPassword);
+     }
+     /**
+      * Generates the password hash.
+      * @param string password
+        * @return string hash
+      */
+       public function hashPassword($password)
+     {
+		return md5($password);
+	}
+	/**
+      * Checks if the given password is correct.
+      * @param string the password to be validated
+      * @return boolean whether the password is valid
+      */
+     public function validatePassword($password)
+     {
+     	// if ($this->hashPassword($password===$this->UserPassword))
+     	// 	echo 'Shit';
+       return $this->hashPassword($password)===$this->UserPassword;
 
+     }
 
 }
