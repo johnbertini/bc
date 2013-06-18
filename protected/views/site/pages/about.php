@@ -8,5 +8,7 @@ $this->breadcrumbs=array(
 ?>
 <h1>About</h1>
 
-<p>This is a "static" page. You may change the content of this page
-by updating the file <code><?php echo __FILE__; ?></code>.</p>
+<?php
+Yii::app()->user->isGuest 
+?>
+<p>This is the Bids that Give online shop, designed to let you purchase products like business cards and subscriptions.</p>

@@ -19,6 +19,13 @@ class UserIdentity extends CUserIdentity
 		{
 			$this->_id=$user->UserID;
 			$this->username=$user->UserAffiliateUsername;
+			$this->setState('fname', $user->UserFname);
+			$this->setState('lname', $user->UserLname);
+			$this->setState('address', $user->UserAddress);
+			$this->setState('city', $user->UserCity);
+			$this->setState('zip',$user->UsertZip);
+			$this->setState('phone',$user->UserPhone);
+			$this->setState('state',$user->UserState);
 			// $this->setState('lastLogin', date("m/d/y g:i A", strtotime($user->last_login_time)));
 			// $user->saveAttributes(array(
 			// 	'last_login_time'=>date("Y-m-d H:i:s", time()),
