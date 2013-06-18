@@ -71,7 +71,11 @@ class SiteController extends Controller
 		}
 		$this->render('contact',array('model'=>$model));
 	}
-
+	 public function actionRegister()
+        {
+            $this->render('register');
+                
+        }
 	/**
 	 * Displays the login page
 	 */

@@ -15,11 +15,11 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+<!-- 	<div class="row">
 		<?php echo $form->labelEx($model,'OrderUserID'); ?>
 		<?php echo $form->textField($model,'OrderUserID'); ?>
 		<?php echo $form->error($model,'OrderUserID'); ?>
-	</div>
+	</div> -->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'OrderSponsorID'); ?>
