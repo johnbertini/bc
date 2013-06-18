@@ -14,8 +14,9 @@ $this->breadcrumbs=array(
 ?>
 
 <h1>Place an Order</h1>
-<div class="well">
-	<img src="../../images/cards/back_8.png" alt="Back of Card" height="300" width="171">
+<div class="well text-center">
+	<img src="../../images/cards/front_BTG_logo.png" height="300px" width ="300px" >
+	<img src="../../images/cards/back_8.png" height="300px" width ="300px" >
 
 	</div>
 <?php 
