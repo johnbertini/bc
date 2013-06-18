@@ -1,7 +1,7 @@
 <?php
 /* @var $this OrdersController */
 /* @var $model Orders */
-$user = Yii::app()->user;
+//$user = Yii::app()->user;
 $this->breadcrumbs=array(
 	// 'Orders'=>array('index'),
 	'Make Order',
@@ -12,11 +12,10 @@ $this->breadcrumbs=array(
 // 	array('label'=>'Manage Orders', 'url'=>array('admin')),
 // );
 ?>
-<?php echo CHtml::link(CHtml::encode($user->UserID), array('view', 'id'=>$user->UserID)); ?>
 
 <h1>Place an Order</h1>
 <div class="well">
-	<img src="/images/cards/back_8.png" alt="Back of Card" height="300" width="171">
+	<img src="../../images/cards/back_8.png" alt="Back of Card" height="300" width="171">
 
 	</div>
 <?php 
