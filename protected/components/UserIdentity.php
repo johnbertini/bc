@@ -26,6 +26,8 @@ class UserIdentity extends CUserIdentity
 			$this->setState('zip',$user->UsertZip);
 			$this->setState('phone',$user->UserPhone);
 			$this->setState('state',$user->UserState);
+			$this->setState('fax',$user->UserFax);
+			// $this->setState('userid',$user->UserID);
 			// $this->setState('lastLogin', date("m/d/y g:i A", strtotime($user->last_login_time)));
 			// $user->saveAttributes(array(
 			// 	'last_login_time'=>date("Y-m-d H:i:s", time()),

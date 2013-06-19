@@ -17,7 +17,9 @@ $city = Yii::app()->user->city;
 $zip = Yii::app()->user->zip;
 $state = Yii::app()->user->state;
 $userFullAddress= $address.', '.$city.', '.$state.', '.$zip;
-
+$userFax = Yii::app()->user->fax;
+$userID =Yii::app()->user->getId(); 
+// echo $userID;
 $this->breadcrumbs=array(
 	// 'Orders'=>array('index'),
 	'Make Order',
@@ -38,16 +40,16 @@ $this->breadcrumbs=array(
 <?php 
 
 $this->widget('bootstrap.widgets.TbDetailView', array(
-    'data'=>array('id'=>1, 'firstName'=>$fname, 'lastName'=>$lname, 'phone'=>$phone, 'address'=>$userFullAddress),
+    'data'=>array('id'=>1, 'firstName'=>$fname, 'lastName'=>$lname, 'phone'=>$phone, 'address'=>$userFullAddress, 'fax'=>$userFax),
     'attributes'=>array(
 	    array('name'=>'firstName', 'label'=>'First name'),
 	    array('name'=>'lastName', 'label'=>'Last name'),
 	    array('name'=>'phone', 'label'=>'Phone number'),
+	    array('name'=>'fax', 'label'=>'Fax number'),
 	    array('name'=>'address', 'label'=>'Address'),
-
     ),
 ));
-
-
+echo "Is this information incorrect? If so, please click";
+echo CHtml::link(' here',array('/users/update/'.$userID)); echo ' to update your information.';
 
 echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -22,6 +22,7 @@ class m130612_073231_create_user_table extends CDbMigration
          'UserCreated'=>'DATETIME default NULL',
          'UserLastvisit'=>'DATETIME default NULL',
          'UserStatus'=>'string NOT NULL',
+         'UserFax'=>'string NOT NULL',
        ), 'ENGINE=InnoDB'); 
     
  }

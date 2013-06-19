@@ -53,7 +53,7 @@ class Users extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('UserEmail, UserFname, UserLname, UserAffiliateUsername, UserPassword, UserCountry, UserAddress, UserCity, UserState, UsertZip, UserPhone, UserPassword_repeat', 'required'),
-			array('UserEmail, UserFname, UserLname, UserAffiliateUsername, UserPassword, UserSponsorId, UserCountry, UserAddress, UserCity, UserState, UsertZip, UserPhone, UserEIN', 'length', 'max'=>255),
+			array('UserEmail, UserFname, UserLname, UserAffiliateUsername, UserPassword, UserSponsorId, UserCountry, UserAddress, UserCity, UserState, UsertZip, UserPhone, UserEIN, UserFax', 'length', 'max'=>255),
 			array('UserCreated, UserPassword_repeat, UserLastvisit', 'safe'),
 			array('UserEmail, UserAffiliateUsername', 'unique'),
 			array('UserEmail','email'),
@@ -101,6 +101,7 @@ class Users extends CActiveRecord
 			'UserLastvisit' => 'User Lastvisit',
 			'UserStatus' => 'User Status',
 			'UserPassword_repeat'=> 'Repeat Password',
+			'UserFax'=> 'Fax Number',
 		);
 	}
 
