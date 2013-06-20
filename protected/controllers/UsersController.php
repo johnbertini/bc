@@ -28,17 +28,19 @@ class UsersController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create'),
+				'actions'=>array('create'),
 				'users'=>array('*'),
+                // 'expression' => array($this, 'isOwner'),
+
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('update'),
+				'actions'=>array('update','view'),
 				'users'=>array('@'),
                 'expression' => array($this, 'isOwner'),
 
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','index'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -53,6 +55,10 @@ class UsersController extends Controller
         return $user->id === $model->UserID;
 	}
 
+	// public function isGuest($user, $rule)
+	// {
+	// 	return Yii::app()->user->isGuest;
+	// }
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed

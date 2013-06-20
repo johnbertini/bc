@@ -43,6 +43,16 @@ class Users extends CActiveRecord
 	{
 		return 'tbl_users';
 	}
+	// public function actions()
+	//  {
+	// 	return array(
+	//    // captcha action renders the CAPTCHA image displayed on the contact page
+	// 	'captcha'=>array(
+	// 	'class'=>'CCaptchaAction',
+	// 	'backColor'=>0xFFFFFF,
+	// 	),
+	// 	);
+	// }
 
 	/**
 	 * @return array validation rules for model attributes.
@@ -58,6 +68,8 @@ class Users extends CActiveRecord
 			array('UserEmail, UserAffiliateUsername', 'unique'),
 			array('UserEmail','email'),
 			array('UserPassword','compare'),
+            // array('UserPassword_repeat', 'compare', 'compareAttribute'=>'UserPassword', 'message'=>"Passwords don't match",'on'=>'create'),
+
 			// array('UserPassword', 'password'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

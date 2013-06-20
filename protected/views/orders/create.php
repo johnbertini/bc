@@ -1,25 +1,13 @@
 <?php
 /* @var $this OrdersController */
 /* @var $model Orders */
-// $this->_id=$user->UserID;
-// $this->username=$user->UserAffiliateUsername;
-// $this->setState('fname', $user->UserFname);
-// $this->setState('lname', $user->UserLname);
-// $this->setState('address', $user->UserAddress);
-// $this->setState('city', $user->UserCity);
-// $this->setState('zip',$user->UsertZip);
-// $this->setState('phone',$user->UserPhone);
-$fname = Yii::app()->user->fname;
-$lname = Yii::app()->user->lname;
-$phone = Yii::app()->user->phone;
-$address = Yii::app()->user->address;
-$city = Yii::app()->user->city;
-$zip = Yii::app()->user->zip;
-$state = Yii::app()->user->state;
-$userFullAddress= $address.', '.$city.', '.$state.', '.$zip;
-$userFax = Yii::app()->user->fax;
-$userID =Yii::app()->user->getId(); 
-// echo $userID;
+$userID= Yii::app()->user->getId();
+$user=Users::model()->find('UserID',array($userID));
+
+
+ $userFullAddress= $user->UserAddress.', '.$user->UserCity.', '.$user->UserState.', '.$user->UsertZip;
+
+
 $this->breadcrumbs=array(
 	// 'Orders'=>array('index'),
 	'Make Order',
@@ -36,20 +24,38 @@ $this->breadcrumbs=array(
 	<img src="../../images/cards/front_BTG_logo.png" height="300px" width ="300px" >
 	<img src="../../images/cards/back_8.png" height="300px" width ="300px" >
 
-	</div>
-<?php 
+</div>
+<!-- This is the information that will appear on your personalized Trivia that Gives business cards:
+<br>
+<br> -->
+<div class="well text-center">
 
+<?php 
 $this->widget('bootstrap.widgets.TbDetailView', array(
-    'data'=>array('id'=>1, 'firstName'=>$fname, 'lastName'=>$lname, 'phone'=>$phone, 'address'=>$userFullAddress, 'fax'=>$userFax),
+    'data'=>array('id'=>1, 'firstName'=>$user->UserFname, 'lastName'=>$user->UserLname, 'phone'=>$user->UserPhone, 'address'=>$userFullAddress, 'fax'=>$user->UserFax, 'email'=>$user->UserEmail, 'username'=>$user->UserAffiliateUsername),
     'attributes'=>array(
 	    array('name'=>'firstName', 'label'=>'First name'),
 	    array('name'=>'lastName', 'label'=>'Last name'),
 	    array('name'=>'phone', 'label'=>'Phone number'),
 	    array('name'=>'fax', 'label'=>'Fax number'),
 	    array('name'=>'address', 'label'=>'Address'),
+	    array('name'=>'email', 'label'=>'Email'),
+	    array('name'=>'username','label'=>'Affiliate Username'),
+
     ),
 ));
-echo "Is this information incorrect? If so, please click";
-echo CHtml::link(' here',array('/users/update/'.$userID)); echo ' to update your information.';
+echo "Is this information incorrect? If so, please click ";
+echo CHtml::link('here',array('/users/update/'.$userID)); echo ' to update your information.';
+echo '<br><br>';
+$this->widget('bootstrap.widgets.TbButton',array(
+	'label' => 'Submit Order',
+	'size' => 'small'
+));
+?>
+</div>
 
-echo $this->renderPartial('_form', array('model'=>$model)); ?>
+
+<?php
+
+// echo $this->renderPartial('_form', array('model'=>$model)); 
+?>

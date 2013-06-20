@@ -1,6 +1,7 @@
 <?php
 /* @var $this SiteController */
-
+$userID= Yii::app()->user->getId();
+$user=Users::model()->find('UserID',array($userID));
 $this->pageTitle=Yii::app()->name;
 ?>
 
@@ -12,7 +13,8 @@ echo '<p>To begin purchasing items, please select "Register" above. If you have 
 else{
 	echo'<p>Welcome to the ';
 	echo CHtml::encode(Yii::app()->name);
-	echo ', '.Yii::app()->user->fname;
+	echo ', '.$user->UserFname;
+	echo'.';
 }
 
 ?>

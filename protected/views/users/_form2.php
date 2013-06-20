@@ -8,7 +8,8 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'users-form',
-	'enableAjaxValidation'=>false,
+	 'enableAjaxValidation'=>false,
+
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -49,11 +50,11 @@
        <?php echo $form->passwordField($model,'UserPassword_repeat',array('size'=>60,'maxlength'=>255)); ?>
        <?php echo $form->error($model,'UserPassword_repeat'); ?>
 	</div>
-	<div class="row">
+	<!-- <div class="row">
 		<?php echo $form->labelEx($model,'UserSponsorId'); ?>
 		<?php echo $form->textField($model,'UserSponsorId',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'UserSponsorId'); ?>
-	</div>
+	</div> -->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'UserCountry'); ?>
@@ -124,8 +125,10 @@
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		
 	</div>
 
 <?php $this->endWidget(); ?>
+
 
 </div><!-- form -->
