@@ -13,6 +13,8 @@ $this->breadcrumbs=array(
 	'Make Order',
 );
 
+$model = new Orders;
+
 // $this->menu=array(
 // 	array('label'=>'List Orders', 'url'=>array('index')),
 // 	array('label'=>'Manage Orders', 'url'=>array('admin')),
@@ -47,16 +49,30 @@ $this->widget('bootstrap.widgets.TbDetailView', array(
 echo "Is this information incorrect? If so, please click ";
 echo CHtml::link('here',array('/users/update/'.$userID)); echo ' to update your information.';
 echo '<br><br>';
-$this->widget('bootstrap.widgets.TbButton',array(
-	'label' => 'Submit Order',
-	'url' => '#',
-	'size' => 'small'
-));
+
 ?>
+
+<?php
+$form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+	'id'=>'horizontalForm',
+	'type'=>'horizontal',
+	)); ?>
+
+<fieldset>
+	<legend>Payment Option </legend>
+
+	<?php echo $form->dropDownListRow($model, 'dropdown', array('Cash', '...','..','.')); ?>
+
+
+</fieldset>
+<div class="form-actions">
+    <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Submit')); ?>
+</div>
+
 </div>
 
 
-<?php
+<?php $this->endWidget();
 
 // echo $this->renderPartial('_form', array('model'=>$model)); 
 ?>
