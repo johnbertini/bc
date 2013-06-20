@@ -30,7 +30,7 @@ $model = new Orders;
 <!-- This is the information that will appear on your personalized Trivia that Gives business cards:
 <br>
 <br> -->
-<div class="well text-center">
+<div class="well ">
 
 <?php 
 $this->widget('bootstrap.widgets.TbDetailView', array(
@@ -60,13 +60,22 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 <fieldset>
 	<legend>Payment Option </legend>
+	
 
-	<?php echo $form->dropDownListRow($model, 'dropdown', array('Cash', '...','..','.')); ?>
+	<?php echo $form->radioButtonListRow($model, 'OrderAmmount', array(
+			'50',
+			'100',
+			'250',
+			'100,000,000',
+		)); ?>
+	<?php echo $form->textFieldRow($model, 'OrderCoupon'); ?>
+	<?php echo $form->dropDownListRow($model, 'OrderPaymentType', array('Cash', '...','..','.')); ?>
+	
 
 
 </fieldset>
 <div class="form-actions">
-    <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Submit')); ?>
+    <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Place Order')); ?>
 </div>
 
 </div>
