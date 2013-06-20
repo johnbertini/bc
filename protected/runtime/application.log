@@ -2691,3 +2691,37 @@ Stack trace:
 REQUEST_URI=/businesscards/index.php/users/15
 HTTP_REFERER=http://localhost:8888/businesscards/index.php/site/login
 ---
+2013/06/20 22:15:59 [error] [exception.CException] exception 'CException' with message 'Property "Users.UserFax" is not defined.' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('UserFax')
+#1 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('UserFax')
+#2 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(Users), 'UserFax')
+#3 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(1257): CHtml::activeInputField('text', Object(Users), 'UserFax', Array)
+#4 /Applications/MAMP/htdocs/yii/framework/web/widgets/CActiveForm.php(657): CHtml::activeTextField(Object(Users), 'UserFax', Array)
+#5 /Applications/MAMP/htdocs/bc/protected/views/users/_form.php(102): CActiveForm->textField(Object(Users), 'UserFax', Array)
+#6 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/M...')
+#7 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/M...', Array, true)
+#8 /Applications/MAMP/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/M...', Array, true)
+#9 /Applications/MAMP/htdocs/bc/protected/views/users/create.php(18): CController->renderPartial('_form', Array)
+#10 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/M...')
+#11 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/M...', Array, true)
+#12 /Applications/MAMP/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/M...', Array, true)
+#13 /Applications/MAMP/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#14 /Applications/MAMP/htdocs/bc/protected/controllers/UsersController.php(93): CController->render('create', Array)
+#15 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionCreate()
+#16 /Applications/MAMP/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Applications/MAMP/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Applications/MAMP/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Applications/MAMP/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Applications/MAMP/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#25 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/create')
+#26 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#27 /Applications/MAMP/htdocs/bc/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/bc/index.php/users/create
+HTTP_REFERER=http://localhost:8888/bc/index.php/site/login
+---

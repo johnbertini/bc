@@ -49,6 +49,7 @@ echo CHtml::link('here',array('/users/update/'.$userID)); echo ' to update your 
 echo '<br><br>';
 $this->widget('bootstrap.widgets.TbButton',array(
 	'label' => 'Submit Order',
+	'url' => '#',
 	'size' => 'small'
 ));
 ?>
