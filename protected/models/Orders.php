@@ -55,7 +55,7 @@ class Orders extends CActiveRecord
 			array('OrderCompletionDate', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('OrderID, OrderUserID, OrderSponsorID, OrderCountry, OrderAddress, OrderCity, OrderState, OrdertZip, OrderMadeDate, OrderCompletionDate, OrderStatus, OrderTrackingNum, OrderAmmount, OrderTax, OrderShipping', 'safe', 'on'=>'search'),
+			array('OrderID, OrderUserID, OrderSponsorID, OrderCountry, OrderAddress, OrderCity, OrderState, OrdertZip, OrderMadeDate, OrderCompletionDate, OrderStatus, OrderTrackingNum, OrderAmmount, OrderTax, OrderShipping, OrderPaymentType, OrderCoupon', 'safe', 'on'=>'search'),
 		);
 	}
 
