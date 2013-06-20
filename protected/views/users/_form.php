@@ -90,7 +90,11 @@
 		<?php echo $form->textField($model,'UserPhone',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'UserPhone'); ?>
 	</div>
-
+	<div class="row">
+		<?php echo $form->labelEx($model,'UserFax'); ?>
+		<?php echo $form->textField($model,'UserFax',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'UserFax'); ?>
+	</div>
 	<div class="row">
 		<?php echo $form->labelEx($model,'UserEIN'); ?>
 		<?php echo $form->textField($model,'UserEIN',array('size'=>60,'maxlength'=>255)); ?>

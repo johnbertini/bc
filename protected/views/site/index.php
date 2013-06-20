@@ -14,7 +14,7 @@ else{
 	echo'<p>Welcome to the ';
 	echo CHtml::encode(Yii::app()->name);
 	echo ', '.$user->UserFname;
-	echo'.';
+	echo '.';
 }
 
 ?>
