@@ -32,6 +32,7 @@ class Orders extends CActiveRecord
 		return parent::model($className);
 	}
 
+	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -124,5 +125,9 @@ class Orders extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+	public function beforeSave()
+	{
+			echo $this->OrderID;
 	}
 }

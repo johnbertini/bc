@@ -43,7 +43,7 @@ $userID =Yii::app()->user->getId();
 				// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				// array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Order Business Cards', 'url'=>array('/orders/create'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Order Business Cards', 'url'=>array('/site/order/'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'View Your Profile', 'url'=>array('/users/view/'.$userID), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Update Your Profile', 'url'=>array('/users/update/'.$userID), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),

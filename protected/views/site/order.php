@@ -7,7 +7,6 @@ $user=Users::model()->find('UserID',array($userID));
 
  $userFullAddress= $user->UserAddress.', '.$user->UserCity.', '.$user->UserState.', '.$user->UsertZip;
 
-
 $this->breadcrumbs=array(
 	// 'Orders'=>array('index'),
 	'Make Order',
@@ -54,13 +53,20 @@ echo '<br><br>';
 
 <?php
 $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-	'id'=>'_form',
+	'id'=>'order_form',
 	'type'=>'horizontal',
 	)); ?>
 
 <fieldset>
-	<legend>Payment Option </legend>
+	<legend>Payment Option</legend>
 	
+<!-- 	<?php echo $form->textFieldRow($model, 'OrderCountry'); ?>
+	<?php echo $form->textFieldRow($model, 'OrderAddress'); ?>
+	<?php echo $form->textFieldRow($model, 'OrderCity'); ?>
+	<?php echo $form->textFieldRow($model, 'OrderState'); ?>
+	<?php echo $form->textFieldRow($model, 'OrdertZip'); ?>
+	<?php echo $form->textFieldRow($model, 'OrderCompletionDate'); ?> -->
+
 
 	<?php echo $form->radioButtonListRow($model, 'OrderAmmount', array(
 			'50',
@@ -69,7 +75,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 			'100,000,000',
 		)); ?>
 	<?php echo $form->textFieldRow($model, 'OrderCoupon'); ?>
-	<?php echo $form->dropDownListRow($model, 'OrderPaymentType', array('Cash', '...','..','.')); ?>
+	<?php echo $form->dropDownListRow($model, 'OrderPaymentType', array('Cash', 'Credit','Human Souls','.')); ?>
 	
 
 

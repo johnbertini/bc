@@ -102,6 +102,26 @@ class SiteController extends Controller
 		$this->render('login',array('model'=>$model));
 	}
 
+	public function actionOrder(){
+		$model=new Orders;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+		if(isset($_POST['Orders']))
+		{
+			var_dump($_POST);
+
+			$model->attributes=$_POST['Orders'];
+			echo '<br><br>';
+			echo $model->OrderID;
+			if($model->save())
+				$this->redirect('www.zombo.com');
+		}
+
+
+		$this->render('order',array('model'=>$model));
+	}
+
 	public function actionOrderConfirmation()
 	{
 		$this->render('orderconfirmation');
