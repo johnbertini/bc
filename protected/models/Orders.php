@@ -53,7 +53,9 @@ class Orders extends CActiveRecord
 			array('OrderUserID, OrderSponsorID', 'numerical', 'integerOnly'=>true),
 			array('OrderAmmount, OrderTax, OrderShipping', 'numerical'),
 			array('OrderCountry, OrderAddress, OrderCity, OrderState, OrdertZip, OrderStatus, OrderTrackingNum', 'length', 'max'=>255),
-			array('OrderCompletionDate', 'safe'),
+			//array('OrderCountry, OrderAddress, OrderCity, OrderState, OrdertZip, OrderStatus, OrderTrackingNum, OrderCompletionDate', 'safe'),
+			array('OrderID, OrderUserID, OrderSponsorID, OrderCountry, OrderAddress, OrderCity, OrderState, OrdertZip, OrderMadeDate, OrderCompletionDate, OrderStatus, OrderTrackingNum, OrderAmmount, OrderTax, OrderShipping, OrderPaymentType, OrderCoupon', 'safe'),
+
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('OrderID, OrderUserID, OrderSponsorID, OrderCountry, OrderAddress, OrderCity, OrderState, OrdertZip, OrderMadeDate, OrderCompletionDate, OrderStatus, OrderTrackingNum, OrderAmmount, OrderTax, OrderShipping, OrderPaymentType, OrderCoupon', 'safe', 'on'=>'search'),
@@ -128,6 +130,6 @@ class Orders extends CActiveRecord
 	}
 	public function beforeSave()
 	{
-			echo $this->OrderID;
+		return TRUE;
 	}
 }

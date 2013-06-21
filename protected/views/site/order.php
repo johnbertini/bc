@@ -76,12 +76,17 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 		)); ?>
 	<?php echo $form->textFieldRow($model, 'OrderCoupon'); ?>
 	<?php echo $form->dropDownListRow($model, 'OrderPaymentType', array('Cash', 'Credit','Human Souls','.')); ?>
-	
+<?php	
 
+// $_POST["OrderUserID"] = $PHP_SELF;
 
+?>
 </fieldset>
 <div class="form-actions">
-    <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Place Order')); ?>
+    <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Place Order'));
+    $_POST["OrderUserID"] = $user->UserID;
+$_POST["OrderCountry"] = $user->UserCountry;
+$_POST["OrderSponsorID"] = $user->UserSponsorId; ?>
 </div>
 
 </div>

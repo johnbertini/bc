@@ -1,5 +1,6 @@
 <?php
 
+
 class SiteController extends Controller
 {
 	/**
@@ -104,18 +105,22 @@ class SiteController extends Controller
 
 	public function actionOrder(){
 		$model=new Orders;
+		$userID= Yii::app()->user->getId();
+		$user=Users::model()->find('UserID',array($userID));
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
 		if(isset($_POST['Orders']))
 		{
-			var_dump($_POST);
+			$_POST["OrderUserID"] = $user->UserID;
+			$_POST["OrderCountry"] = $user->UserCountry;
+			$_POST["OrderSponsorID"] = $user->UserSponsorId;
+						var_dump($_POST);
 
 			$model->attributes=$_POST['Orders'];
-			echo '<br><br>';
-			echo $model->OrderID;
-			if($model->save())
-				$this->redirect('www.zombo.com');
+			//$model->attributes->OrderUserID = $user->UserID;
+			// var_dump($model->attributes);
+			if($model->insert()){
+				echo 'success';
+			}
 		}
 
 
